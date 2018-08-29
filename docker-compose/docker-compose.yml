@@ -1,0 +1,15 @@
+app:
+    build: ./docker/app
+    restart: always
+    expose:
+        - "5000"
+    
+
+nginx:
+    build: ./docker/nginx
+    restart: always
+    ports:
+        - "8080:5000"
+ 
+    links:
+        - app:app
