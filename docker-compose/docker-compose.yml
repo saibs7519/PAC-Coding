@@ -9,7 +9,7 @@ nginx:
     build: ./docker/nginx
     restart: always
     ports:
-        - "8080:5000"
+        - "8080:3000"
  
     links:
         - app:app
